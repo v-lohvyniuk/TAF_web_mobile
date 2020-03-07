@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+
+}
+
+dependencies {
+    // testing frameworks
+    testImplementation('org.junit.jupiter:junit-jupiter:5.6.0')
+    compile 'com.codeborne:selenide:5.8.0'
+    // DI
+    compile group: 'com.google.inject', name: 'guice', version: '4.2.2'
+
+}
+
+test {
+    useJUnitPlatform()
+}
